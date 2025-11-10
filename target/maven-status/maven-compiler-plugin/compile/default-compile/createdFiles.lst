@@ -6,3 +6,4 @@ com\example\springbootjwtmysql\config\SecurityConfig.class
 com\example\springbootjwtmysql\model\Employee.class
 com\example\springbootjwtmysql\config\JwtAuthenticationFilter.class
 com\example\springbootjwtmysql\SpringBootJwtMysqlApplication.class
+com\example\springbootjwtmysql\config\CustomUserDetailsService.class

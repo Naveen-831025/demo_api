@@ -33,15 +33,17 @@ jobs:
           name: springboot-jar
           path: target/*.jar
 
-  # deploy:
-  #   runs-on: ubuntu-latest
-  #   needs: build
-  #   steps:
-  #     - name: Download built artifact
-  #       uses: actions/download-artifact@v4
-  #       with:
-  #         name: springboot-jar
-  #         path: ./target
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Download built artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: springboot-jar
+          path: ./target
+      - name: Check current directory
+        run: ls -al ./target/
 
   #     - name: Deploy to server via SSH
   #       uses: appleboy/ssh-action@v1.0.0
